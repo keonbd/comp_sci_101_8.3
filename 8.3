@@ -1,0 +1,17 @@
+# Create your function here
+def create_list(start, end):          
+    '''start and end are integers for the range method'''
+    my_list = []
+    try:
+        if start < end:
+            for i in range(start, end+1):
+                my_list.append(i)
+        elif start > end:
+            for i in range(start,end-1,-1):
+                my_list.append(i)
+        elif start == end:
+            my_list.append(start)
+    except AttibuteError:
+        pass
+    finally:
+        return my_list
